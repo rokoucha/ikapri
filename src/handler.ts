@@ -8,7 +8,7 @@ export async function handleRequest(request: Request): Promise<Response> {
   if (!screenName) {
     return new Response(
       JSON.stringify({ error: 'query "screenName" not found' }),
-      { status: 400, headers: { 'Content-Type': 'application/json' } },
+      { headers: { 'Content-Type': 'application/json' }, status: 400 },
     )
   }
 
@@ -17,8 +17,8 @@ export async function handleRequest(request: Request): Promise<Response> {
     stats = await getUserStats({ screenName })
   } catch (e) {
     return new Response(JSON.stringify({ error: e.message }), {
-      status: 404,
       headers: { 'Content-Type': 'application/json' },
+      status: 404,
     })
   }
 
@@ -26,9 +26,10 @@ export async function handleRequest(request: Request): Promise<Response> {
 
   return new Response(widget, {
     headers: {
+      'Cache-Control': 'max-age=86400, public, stale-while-revalidate=3600',
       'Content-Type': 'image/svg+xml',
-      'Cache-Control': 'max-age=3600, stale-while-revalidate=360',
       'Last-Modified': stats.updated_at.time.toUTCString(),
+      'X-Robots-Tag': 'noindex',
     },
   })
 }
