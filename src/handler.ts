@@ -1,5 +1,5 @@
 import { getUserStats, UserStats } from './statink'
-import { renderWidget } from './widget'
+import { render } from './render'
 
 export async function handleRequest(request: Request): Promise<Response> {
   const url = new URL(request.url)
@@ -22,7 +22,7 @@ export async function handleRequest(request: Request): Promise<Response> {
     })
   }
 
-  const widget = renderWidget({ screenName, stats })
+  const widget = render({ screenName, stats })
 
   return new Response(widget, {
     headers: {
