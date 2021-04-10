@@ -8,15 +8,15 @@ import { Table } from './table'
 const round = (n: number, r: number) =>
   Math.round(n * Math.pow(10, r)) / Math.pow(10, r)
 
-export type WidgetProps = Readonly<{
+export type IkaPriProps = Readonly<{
   screenName: string
   stats: UserStats
 }>
 
-export const Widget: FC<WidgetProps> = ({ screenName, stats }) => (
+export const IkaPri: FC<IkaPriProps> = ({ screenName, stats }) => (
   <svg
     baseProfile="full"
-    height="540"
+    height="520"
     version="1.1"
     width="300"
     xmlns="http://www.w3.org/2000/svg"

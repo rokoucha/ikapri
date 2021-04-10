@@ -1,5 +1,5 @@
 import Nano from 'nano-jsx'
-import { Widget, WidgetProps } from './components/widget'
+import { IkaPri, IkaPriProps } from './components/ikapri'
 
-export const render = (props: WidgetProps) =>
-  Nano.renderSSR(<Widget {...props} />)
+export const render = (props: IkaPriProps) =>
+  Nano.renderSSR(<IkaPri {...props} />)
