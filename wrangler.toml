@@ -1,5 +1,5 @@
 account_id = "9c06fda7643a430591cf56d434d1837f"
-name = "inpri"
+name = "ikapri"
 type = "webpack"
 webpack_config = "webpack.config.js"
 workers_dev = true
