@@ -51,49 +51,49 @@ export const Widget = ({ screenName, stats }: WidgetProps) => (
     </a>
     <text x="20" y="100">
       <tspan class="label">Battles</tspan>
-      <tspan class="value" dx="-54" dy="30">
+      <tspan class="value" x="20" dy="30">
         {stats.entire.battles}
       </tspan>
     </text>
     <text x="100" y="100">
       <tspan class="label">Win %</tspan>
-      <tspan class="value" dx="-54" dy="30">
+      <tspan class="value" x="100" dy="30">
         {round(stats.entire.win_pct, 1)}%
       </tspan>
     </text>
     <text x="20" y="160">
       <tspan class="label">Avg Kills</tspan>
-      <tspan class="value" dx="-66" dy="30">
+      <tspan class="value" x="20" dy="30">
         {round(stats.entire.kill_avg, 2)}
       </tspan>
     </text>
     <text x="100" y="160">
       <tspan class="label">Avg Deaths</tspan>
-      <tspan class="value" dx="-90" dy="30">
+      <tspan class="value" x="100" dy="30">
         {round(stats.entire.death_avg, 2)}
       </tspan>
     </text>
     <text x="200" y="160">
       <tspan class="label">Kill Ratio</tspan>
-      <tspan class="value" dx="-68" dy="30">
+      <tspan class="value" x="200" dy="30">
         {round(stats.entire.kill_ratio, 2)}
       </tspan>
     </text>
     <text x="20" y="220">
       <tspan class="label">Kills/min</tspan>
-      <tspan class="value" dx="-70" dy="30">
+      <tspan class="value" x="20" dy="30">
         {round(stats.entire.kill_per_min, 3)}
       </tspan>
     </text>
     <text x="100" y="220">
       <tspan class="label">Deaths/min</tspan>
-      <tspan class="value" dx="-92" dy="30">
+      <tspan class="value" x="100" dy="30">
         {round(stats.entire.death_per_min, 3)}
       </tspan>
     </text>
     <text x="200" y="220">
       <tspan class="label">Total Kills</tspan>
-      <tspan class="value" dx="-74" dy="30">
+      <tspan class="value" x="200" dy="30">
         {stats.entire.kill_total}
       </tspan>
     </text>
