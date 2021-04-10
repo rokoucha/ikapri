@@ -4,10 +4,10 @@ import { render } from './render'
 export async function handleRequest(request: Request): Promise<Response> {
   const url = new URL(request.url)
 
-  const screenName = url.searchParams.get('screenName')
-  if (!screenName) {
+  const screenName = url.pathname.slice(1)
+  if (screenName === '') {
     return new Response(
-      JSON.stringify({ error: 'query "screenName" not found' }),
+      JSON.stringify({ error: 'param "screenName" not found' }),
       { headers: { 'Content-Type': 'application/json' }, status: 400 },
     )
   }
