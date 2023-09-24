@@ -1,11 +1,9 @@
 {
-  "author": "Rokoucha <git@rokoucha.net>",
-  "license": "MIT",
-  "main": "index.js",
   "name": "ikapri",
+  "license": "MIT",
   "private": true,
-  "repository": "ssh://git@github.com/rokoucha/ikapri.git",
   "version": "1.0.0",
+  "packageManager": "pnpm@8.7.6",
   "dependencies": {
     "@transform-ts/contrib": "^2.0.0",
     "date-fns": "^2.20.1",
